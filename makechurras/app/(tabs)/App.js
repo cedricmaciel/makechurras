@@ -18,7 +18,7 @@ export default function App() {
     const totalFrango = homens * 0.2 + mulheres * 0.15 + criancas * 0.1;
     const totalLinguica = homens * 0.1 + mulheres * 0.1 + criancas * 0.05;
     const totalRefrigerante = ( criancas + hnaobebe + mnaobebe) * 0.5;
-    const totalCerveja = homens * 1.2 + mulheres * 0.6 - hnaobebe * 1.2 - mnaobebe * 0.6;
+    const totalCerveja = homens * 3.5 + mulheres * 1.2 - hnaobebe * 3.5 - mnaobebe * 1.2;
     
 
     setCarneBovina(totalCarneBovina.toFixed(1));
@@ -108,13 +108,17 @@ export default function App() {
             <Text style={styles.buttonText}>+</Text>
           </TouchableOpacity>
         </View>
-         
-        <View>
-        
-        <Text style={styles.textonome}>Quantidade de quem não bebe:</Text>
 
-        <Text style={styles.textonome}>Homens:</Text>
-        <TouchableOpacity style={styles.button}>
+        <View style={{ height: 40 }} /> {/* gambiarra para pular linha :) */}
+        
+        <Text style={styles.textoTituloQtd}>Quantidade de quem não bebe:</Text>
+       
+        
+       
+
+        <View style={styles.inputPessoa}>
+                 <Text style={styles.textonome}>Homens:</Text>
+                <TouchableOpacity style={styles.button}>
                    <Text style={styles.buttonText} onPress={decrement(setHnaobebe, hnaobebe)}>-</Text>
                </TouchableOpacity>
              <TextInput 
@@ -125,9 +129,11 @@ export default function App() {
               <TouchableOpacity style={styles.button}>
                <Text style={styles.buttonText} onPress={increment(setHnaobebe, hnaobebe)}>+</Text>
               </TouchableOpacity>
-                
+              </View>    
                
-            <View>
+       
+
+        <View style={styles.inputPessoa}>
             <Text style={styles.textonome}>Mulheres:</Text>
             <TouchableOpacity style={styles.button}>
                    <Text style={styles.buttonText} onPress={decrement(setMnaobebe, mnaobebe)}>-</Text>
@@ -143,7 +149,7 @@ export default function App() {
                
             </View>
 
-          </View>
+          
 
       
         <TouchableOpacity style={styles.customButton} onPress={calcular}>
@@ -263,6 +269,13 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 18,
     fontWeight: 'bold',
+  },
+
+  textoTituloQtd: {
+    paddingBottom: 20,
+    fontSize: 20,
+    color: 'white',
+
   },
   resultado: {
     marginTop: 20,
