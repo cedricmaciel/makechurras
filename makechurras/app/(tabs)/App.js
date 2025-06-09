@@ -220,13 +220,13 @@ const styles = StyleSheet.create({
   logo: {
     width: 200, // ajuste conforme necessário
     height: 200, // ajuste conforme necessário
-    marginTop: -20, // ajuste negativo para mover o logo para cima
+    marginTop: -30, // ajuste negativo para mover o logo para cima
   },
   title: {
     color: 'white',
     fontSize: 24,
     fontWeight: 'bold',
-    marginTop: 40,
+    marginTop: 20,
     marginBottom: 20,
   },
   inputPessoa: {
