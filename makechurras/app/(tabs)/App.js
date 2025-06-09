@@ -118,16 +118,16 @@ export default function App() {
 
         <View style={styles.inputPessoa}>
                  <Text style={styles.textonome}>Homens:</Text>
-                <TouchableOpacity style={styles.button}>
-                   <Text style={styles.buttonText} onPress={decrement(setHnaobebe, hnaobebe)}>-</Text>
+                <TouchableOpacity style={styles.button} onPress={decrement(setHnaobebe, hnaobebe)}>
+                   <Text style={styles.buttonText}>-</Text>
                </TouchableOpacity>
              <TextInput 
               style={styles.input}
               keyboardType="numeric"
               value={hnaobebe.toString()}
               onChangeText={handleInput(setHnaobebe)}></TextInput>
-              <TouchableOpacity style={styles.button}>
-               <Text style={styles.buttonText} onPress={increment(setHnaobebe, hnaobebe)}>+</Text>
+              <TouchableOpacity style={styles.button} onPress={increment(setHnaobebe, hnaobebe)}>
+               <Text style={styles.buttonText}>+</Text>
               </TouchableOpacity>
               </View>    
                
@@ -135,16 +135,16 @@ export default function App() {
 
         <View style={styles.inputPessoa}>
             <Text style={styles.textonome}>Mulheres:</Text>
-            <TouchableOpacity style={styles.button}>
-                   <Text style={styles.buttonText} onPress={decrement(setMnaobebe, mnaobebe)}>-</Text>
+            <TouchableOpacity style={styles.button} onPress={decrement(setMnaobebe, mnaobebe)}>
+                   <Text style={styles.buttonText}>-</Text>
                </TouchableOpacity>
              <TextInput style={styles.input}
               keyboardType="numeric"
               value={mnaobebe.toString()}
               onChangeText={handleInput(setMnaobebe)}
               ></TextInput>
-              <TouchableOpacity style={styles.button}>
-               <Text style={styles.buttonText} onPress={increment(setMnaobebe, mnaobebe)}>+</Text>
+              <TouchableOpacity style={styles.button} onPress={increment(setMnaobebe, mnaobebe)} >
+               <Text style={styles.buttonText}>+</Text>
               </TouchableOpacity>
                
             </View>
