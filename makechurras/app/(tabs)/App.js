@@ -110,32 +110,37 @@ export default function App() {
         </View>
          
         <View>
+        
+        <Text style={styles.textonome}>Quantidade de quem não bebe:</Text>
+
         <Text style={styles.textonome}>Homens:</Text>
-            <Text>Quem não bebe</Text>
-              <TouchableOpacity style={styles.button}>
-               <Text style={styles.buttonText} onPress={increment(setHnaobebe, hnaobebe)}>+</Text>
-              </TouchableOpacity>
+        <TouchableOpacity style={styles.button}>
+                   <Text style={styles.buttonText} onPress={decrement(setHnaobebe, hnaobebe)}>-</Text>
+               </TouchableOpacity>
              <TextInput 
               style={styles.input}
               keyboardType="numeric"
               value={hnaobebe.toString()}
               onChangeText={handleInput(setHnaobebe)}></TextInput>
-                <TouchableOpacity style={styles.button}>
-                   <Text style={styles.buttonText} onPress={decrement(setHnaobebe, hnaobebe)}>-</Text>
-               </TouchableOpacity>
+              <TouchableOpacity style={styles.button}>
+               <Text style={styles.buttonText} onPress={increment(setHnaobebe, hnaobebe)}>+</Text>
+              </TouchableOpacity>
+                
                
             <View>
+            <Text style={styles.textonome}>Mulheres:</Text>
             <TouchableOpacity style={styles.button}>
-               <Text style={styles.buttonText} onPress={increment(setMnaobebe, mnaobebe)}>+</Text>
-              </TouchableOpacity>
+                   <Text style={styles.buttonText} onPress={decrement(setMnaobebe, mnaobebe)}>-</Text>
+               </TouchableOpacity>
              <TextInput style={styles.input}
               keyboardType="numeric"
               value={mnaobebe.toString()}
               onChangeText={handleInput(setMnaobebe)}
               ></TextInput>
-                <TouchableOpacity style={styles.button}>
-                   <Text style={styles.buttonText} onPress={decrement(setMnaobebe, mnaobebe)}>-</Text>
-               </TouchableOpacity>
+              <TouchableOpacity style={styles.button}>
+               <Text style={styles.buttonText} onPress={increment(setMnaobebe, mnaobebe)}>+</Text>
+              </TouchableOpacity>
+               
             </View>
 
           </View>
@@ -271,6 +276,7 @@ const styles = StyleSheet.create({
   textos: {
     color: 'white',
     
+    
   },
   borda: {
     borderColor: 'white',
@@ -278,5 +284,7 @@ const styles = StyleSheet.create({
     width: 250,
     backgroundColor: '#D0905B',
     height: 150,
+    padding: 20,
+    alignItems: 'center'
   },
 });
