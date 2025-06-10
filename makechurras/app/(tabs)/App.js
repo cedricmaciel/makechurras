@@ -21,11 +21,11 @@ export default function App() {
     const totalCerveja = homens * 3.5 + mulheres * 1.2 - hnaobebe * 3.5 - mnaobebe * 1.2;
     
 
-    setCarneBovina(totalCarneBovina.toFixed(1));
-    setFrango(totalFrango.toFixed(1));
-    setLinguica(totalLinguica.toFixed(1));
-    setRefrigerante(totalRefrigerante.toFixed(1));
-    setCerveja(totalCerveja.toFixed(1));
+    setCarneBovina(totalCarneBovina.toFixed(3));
+    setFrango(totalFrango.toFixed(3));
+    setLinguica(totalLinguica.toFixed(3));
+    setRefrigerante(totalRefrigerante.toFixed(3));
+    setCerveja(totalCerveja.toFixed(3));
   };
 
   const handleInput = (setter) => (text) => {
@@ -161,7 +161,7 @@ export default function App() {
           <View style={styles.borda}>
             <Text style={styles.textos}>{carneBovina} Kg de Carne Bovina</Text>
             <Text style={styles.textos}>{frango} Kg de Frango</Text>
-            <Text style={styles.textos}>{linguica} Kg de Linguiça</Text>
+            <Text style={styles.textos}>{linguica} Kg de Linguíça</Text>
             <Text style={styles.textos}>{refrigerante} L de Refrigerante</Text>
             <Text style={styles.textos}>{cerveja} L de Cerveja</Text>
           </View>
